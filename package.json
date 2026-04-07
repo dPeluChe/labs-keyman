@@ -1,0 +1,14 @@
+{
+  "name": "labs-keyman",
+  "private": true,
+  "workspaces": ["keyman"],
+  "scripts": {
+    "dev":        "bun run --cwd keyman dev",
+    "tauri":      "bun run --cwd keyman tauri",
+    "tauri:dev":  "bun run --cwd keyman tauri:dev",
+    "tauri:build":"bun run --cwd keyman tauri:build",
+    "build":      "bun run --cwd keyman build",
+    "check":      "bun run --cwd keyman check",
+    "lint":       "bun run --cwd keyman lint"
+  }
+}
