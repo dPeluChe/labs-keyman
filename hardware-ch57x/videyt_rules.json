@@ -1,0 +1,111 @@
+{
+  "title": "Reglas Videyt - Apps & Meeting Control",
+  "rules": [
+    {
+      "description": "Tecla 1: Abrir/Enfocar Arc Browser",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "shell_command": "open -a 'Arc'" }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Tecla 2: Abrir/Enfocar Ghostty CLI",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "shell_command": "open -a 'Ghostty'" }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Tecla 3: Abrir/Enfocar Windsurf IDE",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "shell_command": "open -a 'Windsurf'" }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Tecla 4: Abrir/Enfocar Firefox",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "shell_command": "open -a 'Firefox'" }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Tecla 5: Toggle Mute (Atajo Zoom Cmd+Shift+A)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": ["left_command", "left_shift"]
+            }
+          ],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Tecla 6: Toggle Cámara (Atajo Zoom Cmd+Shift+V)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": ["left_command", "left_shift"]
+            }
+          ],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 4489, "product_id": 34960 }] }
+          ]
+        }
+      ]
+    }
+  ]
+}
