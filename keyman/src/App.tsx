@@ -229,10 +229,11 @@ function App() {
           >
             <SortableContext items={sortedIds} strategy={rectSortingStrategy}>
               <div
-                className="grid mx-auto w-full max-w-full rounded-[24px] bg-white/[0.02] border border-white/[0.06] p-2"
+                className="grid mx-auto rounded-[24px] bg-white/[0.02] border border-white/[0.06] p-2"
                 style={{
                   gap: gap,
-                  gridTemplateColumns: `repeat(${gridCols}, minmax(0, 1fr))`,
+                  gridTemplateColumns: `repeat(${gridCols}, ${slotSize}px)`,
+                  maxWidth: gridCols * slotSize + (gridCols - 1) * gap + 16,
                 }}
               >
                 {Array.from({ length: totalSlots }, (_, i) => {
